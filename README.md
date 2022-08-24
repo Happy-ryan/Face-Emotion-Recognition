@@ -24,10 +24,10 @@ https://docs.docker.com/get-docker/
 exec 코드 깃허브 주소
 ```
 - 실행결과
-! exec 파일 ipynb
+! exec 파일 ipynb 또는 이미지 파일 
 
 ## **💡모델 성능** 
-- Model : 
+- Model : 모델 만든 코드 깃허브 주소
 - loss : 0.4320
 - val_loss : 0.7306
 - accuracy : 0.8518
