@@ -88,7 +88,7 @@ for path in file_csv:
 ```
 all_df_X = all_df.iloc[:,-35:-18]
 all_df['emotion'] = # 추출하는 감정 데이터에 맞춰서 숫자 넣기 - angry : 0 , disgust : 1, happy : 2, neutral : 3, sad : 4, surprise:5
-all_df.to_csv('emotion.csv')
+all_df.to_csv('emotion.csv') # 6가지 감정 csv 파일 통합 > emotion 최종 학습 데이터 생성
 ```
 - 실행결과 
 > 위의 과정 반복 후 각 클래스별csv 파일을 전부 합쳐서 **최종 학습데이터** [**emotion.csv**](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/emotion.csv) 생성
