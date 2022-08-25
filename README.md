@@ -95,7 +95,7 @@ all_df.to_csv('emotion.csv')
 ### 2) 학습 진행 : 다중 로지스틱 회귀분석 > 모델 설계
 학습할 데이터 불러오기 및 랜덤추출
 ```
-df_pre = pd.read_csv('emotion_no_fear.csv')
+df_pre = pd.read_csv('emotion.csv')
 
 df_all = df_pre.sample(frac=1)
 ```
