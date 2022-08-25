@@ -166,10 +166,10 @@ history = model.fit(X_train,Y_train,
 ## **💡모델 테스트**
 1. 데이터 수에 따른 각 감정별 정답률 판단
 > model
-><img width="378" alt="model" src="https://user-images.githubusercontent.com/101412264/186623603-38c37561-ec9b-4989-9e26-013ac503627f.png">
+> <img width="378" alt="model" src="https://user-images.githubusercontent.com/101412264/186623603-38c37561-ec9b-4989-9e26-013ac503627f.png">
 
 > CNN
-><img width="376" alt="CNN" src="https://user-images.githubusercontent.com/101412264/186623588-4af2aa46-203b-4cc7-82cf-862cd8cadc49.png">
+> <img width="376" alt="CNN" src="https://user-images.githubusercontent.com/101412264/186623588-4af2aa46-203b-4cc7-82cf-862cd8cadc49.png">
 
 > Teachable machine
   
