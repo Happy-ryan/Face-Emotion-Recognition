@@ -37,7 +37,8 @@ keras 2.9.0
 wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 ```
 ### 2) 데이터셋 분석
-1. openface 실행
+방법1. window powershell command 입력
+- docker 실행 후 openface 
 ```
 docker run -it --rm -d --name openface -v C:\OpenFace\input:/home/openface-build/build/bin/input -v C:\OpenFace\output:/home/openface-build/build/bin/processed -w /home/openface-build/build/bin algebr/openface:latest
 ```
@@ -47,6 +48,7 @@ docker run -it --rm -d --name openface -v C:\OpenFace\input:/home/openface-build
 docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_dir processed/[폴더명]
 ```
 - 실행결과
+
 - [command.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/command.ipynb)(cf.3번 openface 실행 및 데이터셋 분석 명렁어를 powershell이 아닌 코드로 구현)
 > <img width="304" alt="hahahah" src="https://user-images.githubusercontent.com/101412264/186561481-37dda9e5-13ea-486e-8301-206c37307ba9.PNG">
 
