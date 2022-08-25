@@ -57,6 +57,7 @@ os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_d
 - 실행결과 :  [command.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/command.ipynb)
 > <img width="304" alt="hahahah" src="https://user-images.githubusercontent.com/101412264/186561481-37dda9e5-13ea-486e-8301-206c37307ba9.PNG">
 
+
 ## **💡 2 .최종 학습 데이터 생성 및 모델 설계 방법**
 ### 1) csv파일 통합 후 au_r 스코어 추출 > 최종 학습데이터 생성
 - 각 클래스별로 반복해서 csv파일 만들기 > 결과: [/data/csv/angry.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/angry.csv),[/data/csv/disgust.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/disgust.csv),[/data/csv/happy.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/happy.csv),[/data/csv/neutral.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/nutral.csv), [/data/csv/sad.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/sad.csv),[/data/csv/surprise.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/surprise.csv)
@@ -151,6 +152,7 @@ history = model.fit(X_train,Y_train,
                     batch_size=50,
                     callbacks=[early_stopping_callback,checkpointer])
 ```
+
 
 ## **💡모델 성능** 
 - Model : [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5)
