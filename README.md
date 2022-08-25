@@ -168,7 +168,15 @@ history = model.fit(X_train,Y_train,
 [exec_final.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/exec_final.ipynb)
 
 ## **💡모델 성능 비교**
-1. 데이터 수에 따른 각 감정별 정답률 판단
+1. [test_data]()에 대한 두 가지 모델 전체 정답률 비교
+- AU스코어를 활용한 다중로지스틱 회귀 방식의 모델 : **전체 정답률 : 0.80**
+- Teachable Machine 활용 모델 : **전체 정답률 : 0.47**
+
+- 정리
+> 데이터의 수가 적을 때 그리고 분류해야할 클래스가 많을 때 Teachable Machine 모델은 제대로 감정 판정을 하기 어려운 것을 알 수 있다.
+
+
+2. 데이터 수에 따른 각 감정별 정답률 판단
 - model ( based [데이터 셋](#데이터셋) : 총 train_data 수 : 4474 / 총 test_data : 60 )
 > <img width="378" alt="model" src="https://user-images.githubusercontent.com/101412264/186623603-38c37561-ec9b-4989-9e26-013ac503627f.png">
 
@@ -181,20 +189,12 @@ history = model.fit(X_train,Y_train,
 > <img width="421" alt="ㅇㅇ" src="https://user-images.githubusercontent.com/101412264/186637822-e5c234fe-ca69-481f-9e99-fce62be79658.png">
 
 
-- 정리
+- 최종 정리
 > Teachable machine 모델과 CNN 모델 모두 CNN을 기본으로 하는데 각 데이터를 학습하고 test_data에 대한 각 감정 판정률 및 전체 정답률 차이가 심하게난다. 이는 CNN기반으로
 > 인간의 감정을 판단하기 위해서는 **kaggle 데이터만큼 아주 많은 수의 데이터가 있어야 유의미한 학습이 진행되어 판정을 할 수 있다는 결론**이 나온다.
 > 
 > 그에 반해 model은 CNN 모델 학습 데이터 수의 17%에 불과하지만 test_data에 대해서 CNN모델과 유사한 경향과 정답률을 보여준다. 
 > 이를 통해서 **AU_r 스코어가 인간의 감정과 유의미한 상관관계가 있어 적은 수의 데이터로도 높은 확률로 인간의 감정을 판단할 수 있다는 결론**을 알 수 있다.
-
-2. [test_data]()에 대한 두 가지 모델 전체 정답률 비교
-- AU스코어를 활용한 다중로지스틱 회귀 방식의 모델 : **전체 정답률 : 0.80**
-- Teachable Machine 활용 모델 : **전체 정답률 : 0.47**
-
-- 정리
-> 데이터의 수가 적을 때 그리고 분류해야할 클래스가 많을 때 Teachable Machine 모델은 제대로 감정 판정을 하기 어려운 것을 알 수 있다.
-
 
 ## **데이터셋** 
 총 6종 선정
