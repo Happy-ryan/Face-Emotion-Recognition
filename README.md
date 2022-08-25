@@ -15,7 +15,7 @@ matplotlib 3.5.1
 ## **💡사용법**
 1. 폴더 생성하기
 ```
-creatFolder 코드 깃허브 주소
+[/src/creatFolder.py](https://github.com/Classufy/xai-dog-breed-classification/blob/master/assets/best_model.h5)
 ```
 2. 도커 다운로드 및 실행 
 ```
