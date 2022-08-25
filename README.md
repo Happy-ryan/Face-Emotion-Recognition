@@ -153,7 +153,6 @@ history = model.fit(X_train,Y_train,
                     callbacks=[early_stopping_callback,checkpointer])
 ```
 
-
 ## **💡모델 성능** 
 - Model : [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5)
 - loss : 0.4320
@@ -164,6 +163,11 @@ history = model.fit(X_train,Y_train,
 - 실험 결과 : [model.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/model.ipynb)
 
 ## **💡모델 테스트**
+- 학습하지 않은 test_set을  [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5) 넣어 정답률 파악
+- 실행결과
+[exec_final.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/exec_final.ipynb)
+
+## **💡모델 비교**
 1. 데이터 수에 따른 각 감정별 정답률 판단
 - model
 > <img width="378" alt="model" src="https://user-images.githubusercontent.com/101412264/186623603-38c37561-ec9b-4989-9e26-013ac503627f.png">
@@ -171,14 +175,14 @@ history = model.fit(X_train,Y_train,
 > <img width="376" alt="CNN" src="https://user-images.githubusercontent.com/101412264/186623588-4af2aa46-203b-4cc7-82cf-862cd8cadc49.png">
 - Teachable machine
 
-  
 
 2. train_set에 포함되지 않는 [60장의 test_set]()에 대한 두 가지 모델 정답률 비교
 > AU스코어를 활용한 다중로지스틱 회귀 방식의 모델
 > 전체 정답률 : 0.80
-
 > Teachable Machine 활용 모델 
 > 전체 정답률 : 0.47
+
+
 ## **데이터셋** 
 총 6종 선정
 1. train_data
