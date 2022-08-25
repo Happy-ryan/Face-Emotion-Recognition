@@ -174,9 +174,10 @@ history = model.fit(X_train,Y_train,
 
 2. train_set에 포함되지 않는 [60장의 test_set]()에 대한 두 가지 모델 정답률 비교
 > AU스코어를 활용한 다중로지스틱 회귀 방식의 모델
-> 정답률 :
+> 전체 정답률 : 0.80
+
 > Teachable Machine 활용 모델 
-> 정답률 :
+> 전체 정답률 : 0.47
 ## **데이터셋** 
 총 6종 선정
 1. train_data
