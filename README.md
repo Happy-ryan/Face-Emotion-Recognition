@@ -143,7 +143,7 @@ checkpointer = ModelCheckpoint(filepath=modelpath,
                                verbose=1,
                                save_best_only=True)
 ```
-모델 실행하기
+모델 실행하기 및 저장
 ```
 history = model.fit(X_train,Y_train,
                     validation_split=0.33,
@@ -151,6 +151,7 @@ history = model.fit(X_train,Y_train,
                     batch_size=50,
                     callbacks=[early_stopping_callback,checkpointer])
 ```
+
 ## **💡모델 성능** 
 - Model : [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5)
 - loss : 0.4320
