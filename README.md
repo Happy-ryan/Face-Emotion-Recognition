@@ -92,7 +92,7 @@ all_df.to_csv('emotion.csv')
 - 실행결과 
 > 위의 과정 반복 후 각 클래스별csv 파일을 전부 합쳐서 **최종 학습데이터** [**emotion.csv**](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/emotion.csv) 생성
 
-### 2) 학습 진행
+### 2) 학습 진행 : 다중 로지스틱 회귀분석 
 학습할 데이터 불러오기 및 랜덤추출
 ```
 df_pre = pd.read_csv('emotion_no_fear.csv')
@@ -151,14 +151,6 @@ history = model.fit(X_train,Y_train,
                     batch_size=50,
                     callbacks=[early_stopping_callback,checkpointer])
 ```
-생성된 모델로 테스트세트 정답률 점검
-```
-```
-각 감정의 개별 정답률 파악
-```
-```
-
-
 ## **💡모델 성능** 
 - Model : [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5)
 - loss : 0.4320
