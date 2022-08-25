@@ -29,7 +29,6 @@ matplotlib 3.5.1
 - 실행결과
  <img width="340" alt="happyhappy" src="https://user-images.githubusercontent.com/101412264/186548779-5e1f45e0-39b4-47cc-86de-8a5c20250f05.PNG">
 
-4. 
 
 ## **💡모델 성능** 
 - Model : [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5)
