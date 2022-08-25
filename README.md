@@ -45,7 +45,7 @@ docker run -it --rm -d --name openface -v C:\OpenFace\input:/home/openface-build
 docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_dir processed/[폴더명]
 ```
 4. Execution result
-- [command.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/command.ipynb)(cf.3번 openface 실행 및 데이터셋 분석 명렁어를 powershell이 아닌 코드로 구현하는 방법 포함)
+- [command.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/command.ipynb)(cf.3번 openface 실행 및 데이터셋 분석 명렁어를 powershell이 아닌 코드로 구현)
 > <img width="304" alt="hahahah" src="https://user-images.githubusercontent.com/101412264/186561481-37dda9e5-13ea-486e-8301-206c37307ba9.PNG">
 
 ## **💡모델 성능** 
