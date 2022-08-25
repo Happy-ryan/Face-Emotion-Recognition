@@ -31,8 +31,7 @@ keras 2.9.0
 2. Docker download 
 - [docker download](https://docs.docker.com/get-docker/) 후 starting
 
-3. Window powershell command
-- 커널 설치
+3. Window powershell command 커널 설치
 ```
 wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 ```
