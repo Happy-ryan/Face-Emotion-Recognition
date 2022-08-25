@@ -27,7 +27,7 @@ exec 코드 깃허브 주소
 ! exec 파일 ipynb 또는 이미지 파일 
 
 ## **💡모델 성능** 
-- Model : 모델 만든 코드 깃허브 주소
+- Model : [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5)
 - loss : 0.4320
 - val_loss : 0.7306
 - accuracy : 0.8518
