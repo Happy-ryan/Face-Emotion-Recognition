@@ -59,7 +59,7 @@ os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_d
 
 ## **💡 2 .모델 설계 방법**
 ### 1) csv파일 통합 후 au_r 스코어 추출
-- csv 파일 읽고 통합
+csv 파일 읽고 통합
 ```
 import os
 import pandas as pd
@@ -85,7 +85,7 @@ for path in file_csv:
     df = pd.read_csv(path)
     all_df = pd.concat([all_df,df],ignore_index=True)
 ```
-- **au_r 스코어 추출 및 저장**
+**au_r 스코어 추출 및 저장**
 ```
 all_df_X = all_df.iloc[:,-35:-18]
 
