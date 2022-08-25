@@ -14,9 +14,8 @@ matplotlib 3.5.1
 ```
 ## **💡사용법**
 1. 폴더 생성하기
-```
 - [creatFolder.py](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/creatFloder.py)으로 OpenFace > input, output 생성
-```
+
 2. 도커 다운로드 및 실행 
 ```
 https://docs.docker.com/get-docker/
