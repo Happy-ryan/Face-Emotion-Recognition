@@ -35,7 +35,7 @@ keras 2.9.0
 ```
 wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 ```
-### 2) 데이터셋 분석
+### 2) 데이터셋 추출
 방법1. window powershell command 입력
 - docker 실행 후 openface 
 ```
@@ -57,6 +57,35 @@ os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_d
 - 실행결과 :  [command.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/command.ipynb)
 > <img width="304" alt="hahahah" src="https://user-images.githubusercontent.com/101412264/186561481-37dda9e5-13ea-486e-8301-206c37307ba9.PNG">
 
+### 3) AU_r 데이터 추출
+```
+file_csv = []
+def print_files_in_dir(root_dir):
+    files = os.listdir(root_dir)
+    for file in files:
+        path = os.path.join(root_dir, file)
+        file_name = path
+        if file_name[-4:] =='.csv':
+            file_csv.append(file_name)
+    # print(file_csv) # 파일경로 확인 
+
+if __name__ == "__main__":
+    root_dir = "C:\OpenFace\output\\[테스트파일 폴더명]"
+    print_files_in_dir(root_dir)
+
+# csv 파일 > dataframe 읽고 통합하기
+test_df = pd.DataFrame()
+for path in file_csv:
+    df = pd.read_csv(path)
+    test_df = pd.concat([test_df,df],ignore_index=True)
+
+# au_r 읽기 : 속성 읽기 
+test_df_X = test_df.iloc[:,-35:-18]
+```
+## **💡모델 설계**
+-
+
+
 ## **💡모델 성능** 
 - Model : [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5)
 - loss : 0.4320
@@ -64,7 +93,7 @@ os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_d
 - accuracy : 0.8518
 - val_accuracy : 0.7353
 - last update : 22/08/24
-- 실험 결과 : [exec_final.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/exec_final.ipynb)
+- 실험 결과 : [model.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/model.ipynb)
 
 ## **데이터셋** 
 총 6종 선정
