@@ -92,7 +92,71 @@ all_df.to_csv('emotion.csv')
 - 실행결과 
 > 위의 과정 반복 후 각 클래스별csv 파일을 전부 합쳐서 **최종 학습데이터** [**emotion.csv**](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/emotion.csv) 생성
 
-### 2) 
+### 2) 학습 진행
+학습할 데이터 불러오기 및 랜덤추출
+```
+df_pre = pd.read_csv('emotion_no_fear.csv')
+
+df_all = df_pre.sample(frac=1)
+```
+원-핫코딩
+```
+dataset = df_all.values
+
+import tensorflow as tf
+from sklearn.preprocessing import LabelEncoder
+
+X = dataset[:,:-1].astype(float) # confidence 제외
+Y = dataset[:,-1]
+Y_encoded = tf.keras.utils.to_categorical(Y)
+```
+데이터 나누기
+```
+X_train,X_test,Y_train,Y_test = train_test_split(X,Y_encoded,
+                                                 test_size = 0.25)
+```
+딥러닝 모델 결정하기 relu 와 softmax 사용
+```
+model = Sequential()
+model.add(Dense(300,input_dim=17,activation="relu"))
+model.add(Dense(200,activation="relu"))
+model.add(Dense(100,activation="relu"))
+model.add(Dense(50,activation="relu"))
+model.add(Dense(6,activation="softmax"))
+model.compile(loss='categorical_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+```
+자동 중단 설정 
+```
+early_stopping_callback = EarlyStopping(monitor='val_loss',patience=7)
+```
+모델 저장 폴더 생성 및  저장 조건 설정
+```
+MODEL_DIR = './model'
+if not os.path.exists(MODEL_DIR):
+  os.mkdir(MODEL_DIR)
+# 모델 저장 조건 설정
+modelpath = './model/{epoch:02d}-{val_loss:.4f}.hdf5'
+checkpointer = ModelCheckpoint(filepath=modelpath,
+                               monitor="val_loss",
+                               verbose=1,
+                               save_best_only=True)
+```
+모델 실행하기
+```
+history = model.fit(X_train,Y_train,
+                    validation_split=0.33,
+                    epochs=5000,
+                    batch_size=50,
+                    callbacks=[early_stopping_callback,checkpointer])
+```
+생성된 모델로 테스트세트 정답률 점검
+```
+```
+각 감정의 개별 정답률 파악
+```
+```
 
 
 ## **💡모델 성능** 
@@ -105,8 +169,19 @@ all_df.to_csv('emotion.csv')
 - 실험 결과 : [model.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/model.ipynb)
 
 ## **💡모델 테스트**
-- train_set에 포함되지 않는 60장의 test_set
+1. 데이터 수에 따른 각 감정별 정답률 판단
+> model
 
+> CNN
+
+> Teachable machine
+  
+
+2. train_set에 포함되지 않는 [60장의 test_set]()에 대한 두 가지 모델 정답률 비교
+> AU스코어를 활용한 다중로지스틱 회귀 방식의 모델
+> 정답률 :
+> Teachable Machine 활용 모델 
+> 정답률 :
 ## **데이터셋** 
 총 6종 선정
 1. train_data
