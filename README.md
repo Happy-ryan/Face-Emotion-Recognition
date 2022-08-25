@@ -8,9 +8,10 @@
 
 ## **💡버전**
 ```
-TensorFlow 2.5.1 이상
-Python 3.8.10 이상
-matplotlib 3.5.1
+TensorFlow 2.9.2 
+Python 3.8.13 이상
+matplotlib 3.5.2
+keras 2.9.0
 ```
 ## **💡사용법**
 1. 폴더 생성하기
