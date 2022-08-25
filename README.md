@@ -58,7 +58,40 @@ os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_d
 > <img width="304" alt="hahahah" src="https://user-images.githubusercontent.com/101412264/186561481-37dda9e5-13ea-486e-8301-206c37307ba9.PNG">
 
 ## **💡 2 .모델 설계 방법**
--
+### 1) csv파일 통합 후 au_r 스코어 추출
+- csv 파일 읽고 통합
+```
+import os
+import pandas as pd
+
+file_csv = []
+def print_files_in_dir(root_dir):
+    files = os.listdir(root_dir)
+    for file in files:
+        path = os.path.join(root_dir, file)
+        file_name = path
+        if file_name[-4:] =='.csv':
+            file_csv.append(file_name)
+    print(file_csv) # 파일경로 확인 
+
+
+if __name__ == "__main__":
+    root_dir = r"C:\OpenFace\output\[폴더명]"
+    print_files_in_dir(root_dir)
+
+# csv 파일 > dataframe 읽고 통합하기
+all_df = pd.DataFrame()
+for path in file_csv:
+    df = pd.read_csv(path)
+    all_df = pd.concat([all_df,df],ignore_index=True)
+```
+- **au_r 스코어 추출 및 저장**
+```
+all_df_X = all_df.iloc[:,-35:-18]
+
+all_df.to_csv('emotion.csv')
+```
+### 2) 
 
 
 ## **💡모델 성능** 
