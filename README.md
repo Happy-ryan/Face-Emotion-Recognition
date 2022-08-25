@@ -162,8 +162,8 @@ history = model.fit(X_train,Y_train,
 - last update : 22/08/24
 - 실험 결과 : [model.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/model.ipynb)
 
-## **💡모델 테스트**
-- 학습하지 않은 test_set을  [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5) 넣어 정답률 파악
+## **💡모델 테스트** 
+- 학습하지 않은 [test_data](#test_data)을  [best_model.hdf5](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/models/best_model.hdf5) 넣어 정답률 파악
 - 실행결과
 [exec_final.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/exec_final.ipynb)
 
