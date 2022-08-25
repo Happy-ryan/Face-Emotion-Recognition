@@ -23,7 +23,7 @@ Python 3.8.13 이상
 matplotlib 3.5.2
 keras 2.9.0
 ```
-## **💡사용법**
+## **💡 1.오픈소스 환경 설정 및 데이터 추출 방법**
 ### 1) 오픈소스 환경 설정
 1. Creat folder
 - [creatFolder.py](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/creatFloder.py)으로 OpenFace > input, output 생성
@@ -57,7 +57,7 @@ os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_d
 - 실행결과 :  [command.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/command.ipynb)
 > <img width="304" alt="hahahah" src="https://user-images.githubusercontent.com/101412264/186561481-37dda9e5-13ea-486e-8301-206c37307ba9.PNG">
 
-## **💡모델 설계**
+## **💡 2 .모델 설계 방법**
 -
 
 
