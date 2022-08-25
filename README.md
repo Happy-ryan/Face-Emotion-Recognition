@@ -37,11 +37,11 @@ wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 ```
 ### 2) 데이터셋 추출
 방법1. window powershell command 입력
-- docker 실행 후 openface 
+docker 실행 후 openface 
 ```
 docker run -it --rm -d --name openface -v C:\OpenFace\input:/home/openface-build/build/bin/input -v C:\OpenFace\output:/home/openface-build/build/bin/processed -w /home/openface-build/build/bin algebr/openface:latest
 ```
-- input 하위 폴더의 데이터셋 분석
+input 하위 폴더의 데이터셋 분석
   > input의 하위 폴더에 분석하고자하는 데이터(jpg형식만 가능)저장 
 ```
 docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_dir processed/[폴더명]
