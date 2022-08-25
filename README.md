@@ -181,7 +181,7 @@ history = model.fit(X_train,Y_train,
 > <img width="421" alt="ㅇㅇ" src="https://user-images.githubusercontent.com/101412264/186637822-e5c234fe-ca69-481f-9e99-fce62be79658.png">
 
 
--정리
+- 정리
 > Teachable machine 모델과 CNN 모델 모두 CNN을 기본으로 하는데 각 데이터를 학습하고 test_data에 대한 각 감정 판정률 및 전체 정답률 차이가 심하게난다. 이는 CNN기반으로
 > 인간의 감정을 판단하기 위해서는 **kaggle 데이터만큼 아주 많은 수의 데이터가 있어야 유의미한 학습이 진행되어 판정을 할 수 있다는 결론**이 나온다.
 > 
