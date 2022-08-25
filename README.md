@@ -14,7 +14,7 @@
 우선 가장 대표적인 감정 6가지(angry, disgust, happy, neutral, sad, surprise)를 선정하여  [데이터 셋](#데이터셋)을 구성하였다. 오픈소스 ‘openface’를 활용해 데이터셋을 분석하여 각 감정의 좌표 및 AU스코어 jpg파일, csv파일 데이터셋을 확보했다. 6가지 감정을 분류하는 방법은 **다중 로지스틱 회귀 방식**을 이용했으며 **속성은 AU_r, 클래스는 6가지 감정**으로 정했다. 
 
 
- 마지막으로 AU스코어를 활용한 [다중로지스틱 회귀 방식의 모델](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/model.ipynb), 구글에서 제공하는 서비스인 [Teachable Machine 활용 모델](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/Teachable_machine_model.ipynb), [CNN 활용 모델](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/CNN_model.ipynb)(based [kaggle data_set](https://www.kaggle.com/datasets/msambare/fer2013))을 비교해볼 예정이다.
+ 마지막으로 AU스코어를 활용한 [다중로지스틱 회귀 방식의 모델](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/model.ipynb), 구글에서 제공하는 서비스인 [Teachable Machine 활용 모델](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/Teachable_machine_model.ipynb), [CNN 활용 모델](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/CNN_model.ipynb)(based [kaggle data_set](https://www.kaggle.com/datasets/msambare/fer2013))의 성능을 비교해본다.
 
 ## **💡버전**
 ```
