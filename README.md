@@ -24,10 +24,10 @@ matplotlib 3.5.1
   > wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 - openface 실행
   > docker run -it --rm -d --name openface -v C:\OpenFace\input:/home/openface-build/build/bin/input -v C:\OpenFace\output:/home/openface-build/build/bin/processed -w /home/openface-build/build/bin algebr/openface:latest
-- input 하위 폴더의 데이터 분석 
+- input 하위 폴더의 데이터셋 분석 
   > docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_dir processed/[폴더명]
 - 실행결과
-  <img width="340" alt="happyhappy" src="https://user-images.githubusercontent.com/101412264/186548779-5e1f45e0-39b4-47cc-86de-8a5c20250f05.PNG">
+ <img width="340" alt="happyhappy" src="https://user-images.githubusercontent.com/101412264/186548779-5e1f45e0-39b4-47cc-86de-8a5c20250f05.PNG">
 
 4. 
 
