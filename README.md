@@ -58,7 +58,7 @@ os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_d
 > <img width="304" alt="hahahah" src="https://user-images.githubusercontent.com/101412264/186561481-37dda9e5-13ea-486e-8301-206c37307ba9.PNG">
 
 ## **💡 2 .모델 설계 방법**
-### 1) csv파일 통합 후 au_r 스코어 추출
+### 1) csv파일 통합 후 au_r 스코어 추출 > 최종 학습데이터 생성
 각 클래스별로 반복해서 csv파일 만들기 > 결과: [/data/csv/angry.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/angry.csv),[/data/csv/disgust.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/disgust.csv),[/data/csv/happy.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/happy.csv),[/data/csv/neutral.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/nutral.csv), [/data/csv/sad.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/sad.csv),[/data/csv/surprise.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/surprise.csv)
 ```
 import os
@@ -89,7 +89,7 @@ all_df_X = all_df.iloc[:,-35:-18]
 all_df['emotion'] = # 추출하는 감정 데이터에 맞춰서 숫자 넣기 - angry : 0 , disgust : 1, happy : 2, neutral : 3, sad : 4, surprise:5
 all_df.to_csv('emotion.csv')
 ```
-위의 과정 반복 후 각 클래스별csv 파일을 전부 합쳐서 최종 학습데이터 [**emotion.csv**](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/emotion.csv) 생성
+- 위의 과정 반복 후 각 클래스별csv 파일을 전부 합쳐서 **최종 학습데이터** [**emotion.csv**](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/emotion.csv) 생성
 
 ### 2) 
 
