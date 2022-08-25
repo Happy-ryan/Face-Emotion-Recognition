@@ -37,8 +37,9 @@ keras 2.9.0
   > docker run -it --rm -d --name openface -v C:\OpenFace\input:/home/openface-build/build/bin/input -v C:\OpenFace\output:/home/openface-build/build/bin/processed -w /home/openface-build/build/bin algebr/openface:latest
 - input 하위 폴더의 데이터셋 분석
   > input의 하위 폴더에 분석하고자하는 데이터(jpg형식만 가능)저장 
+```
   > docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_dir processed/[폴더명]
-
+```
 4. Execution result
 - [command.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/command.ipynb)(cf.3번 openface 실행 및 데이터셋 분석 명렁어를 powershell이 아닌 코드로 구현하는 방법 포함)
 > <img width="304" alt="hahahah" src="https://user-images.githubusercontent.com/101412264/186561481-37dda9e5-13ea-486e-8301-206c37307ba9.PNG">
