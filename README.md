@@ -55,9 +55,7 @@ os.system('docker run -it --rm -d --name openface -v C:\OpenFace\input:/home/ope
 # input 하위 폴더 분석 > output 하위 폴더 csv 파일 생성 명령어
 os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_dir processed/[폴더명]')
 ```
-- 실행결과
-
-- [command.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/command.ipynb)(cf.3번 openface 실행 및 데이터셋 분석 명렁어를 powershell이 아닌 코드로 구현)
+- 실행결과 :  [command.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/command.ipynb)
 > <img width="304" alt="hahahah" src="https://user-images.githubusercontent.com/101412264/186561481-37dda9e5-13ea-486e-8301-206c37307ba9.PNG">
 
 ## **💡모델 성능** 
