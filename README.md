@@ -24,7 +24,7 @@ matplotlib 3.5.2
 keras 2.9.0
 ```
 ## **💡사용법**
-### 오픈소스 환경 설정
+### 1) 오픈소스 환경 설정
 1. Creat folder
 - [creatFolder.py](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/creatFloder.py)으로 OpenFace > input, output 생성
 
@@ -36,7 +36,7 @@ keras 2.9.0
 ```
 wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 ```
-###
+### 2) 데이터셋 분석
 - openface 실행
 ```
 docker run -it --rm -d --name openface -v C:\OpenFace\input:/home/openface-build/build/bin/input -v C:\OpenFace\output:/home/openface-build/build/bin/processed -w /home/openface-build/build/bin algebr/openface:latest
