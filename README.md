@@ -103,6 +103,9 @@ all_df.to_csv('emotion.csv')
 - last update : 22/08/24
 - 실험 결과 : [model.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/model.ipynb)
 
+## **💡모델 테스트**
+- train_set에 포함되지 않는 60장의 test_set
+
 ## **데이터셋** 
 총 6종 선정
 1. train_data
