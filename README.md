@@ -59,7 +59,7 @@ os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_d
 
 ## **💡 2 .모델 설계 방법**
 ### 1) csv파일 통합 후 au_r 스코어 추출
-각 감정별로 반복 > 결과: [/data/csv/](https://github.com/Happy-ryan/Face-Emotion-Recognition/tree/main/data/csv)
+각 클래스별로 반복해서 csv파일 만들기 > 결과: [/data/csv/angry.csv]([https://github.com/Happy-ryan/Face-Emotion-Recognition/tree/main/data/csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/angry.csv))
 ```
 import os
 import pandas as pd
@@ -89,6 +89,7 @@ all_df_X = all_df.iloc[:,-35:-18]
 all_df['emotion'] = 추출하는 감정 데이터에 맞춰서 숫자 넣기  # angry : 0 , disgust : 1, happy : 2, neutral : 3, sad : 4, surprise:5
 all_df.to_csv('emotion.csv')
 ```
+위의 과정 반복 후 각 클래스별csv 파일을 전부 합쳐서 [emotion.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/emotion.csv)로 만들기
 ### 2) 
 
 
