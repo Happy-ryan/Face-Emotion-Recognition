@@ -14,10 +14,10 @@ matplotlib 3.5.2
 keras 2.9.0
 ```
 ## **💡사용법**
-1. 폴더 생성하기
+1. creat folder
 - [creatFolder.py](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/creatFloder.py)으로 OpenFace > input, output 생성
 
-2. docker download  실행 
+2. docker download 
 - [docker download](https://docs.docker.com/get-docker/) 후 실행
 
 3. window powershell command
