@@ -59,7 +59,7 @@ os.system('docker exec openface ./FaceLandmarkImg -fdir input/[폴더명] -out_d
 
 ## **💡 2 .모델 설계 방법**
 ### 1) csv파일 통합 후 au_r 스코어 추출 > 최종 학습데이터 생성
-각 클래스별로 반복해서 csv파일 만들기 > 결과: [/data/csv/angry.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/angry.csv),[/data/csv/disgust.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/disgust.csv),[/data/csv/happy.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/happy.csv),[/data/csv/neutral.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/nutral.csv), [/data/csv/sad.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/sad.csv),[/data/csv/surprise.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/surprise.csv)
+- 각 클래스별로 반복해서 csv파일 만들기 > 결과: [/data/csv/angry.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/angry.csv),[/data/csv/disgust.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/disgust.csv),[/data/csv/happy.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/happy.csv),[/data/csv/neutral.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/nutral.csv), [/data/csv/sad.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/sad.csv),[/data/csv/surprise.csv](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/data/csv/surprise.csv)
 ```
 import os
 import pandas as pd
@@ -110,12 +110,12 @@ X = dataset[:,:-1].astype(float) # confidence 제외
 Y = dataset[:,-1]
 Y_encoded = tf.keras.utils.to_categorical(Y)
 ```
-데이터 나누기
+데이터셋(emotion.csv)에서 train,test 설정 
 ```
 X_train,X_test,Y_train,Y_test = train_test_split(X,Y_encoded,
                                                  test_size = 0.25)
 ```
-딥러닝 모델 결정하기 relu 와 softmax 사용
+딥러닝 모델 결정하기 : relu 와 softmax 사용
 ```
 model = Sequential()
 model.add(Dense(300,input_dim=17,activation="relu"))
