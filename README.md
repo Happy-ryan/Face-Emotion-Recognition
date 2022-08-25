@@ -37,7 +37,7 @@ keras 2.9.0
 - accuracy : 0.8518
 - val_accuracy : 0.7353
 - last update : 22/08/24
-- 실험 결과 :
+- 실험 결과 : [exec_final.ipynb](https://github.com/Happy-ryan/Face-Emotion-Recognition/blob/main/src/exec_final.ipynb)
 
 ## **데이터셋** 
 총 6종 선정
